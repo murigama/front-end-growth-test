@@ -14,7 +14,6 @@ const componentMap = {
 };
 
 export function DynamicSection({ section }: { section: Section }) {
-  console.log(section);
   const Component =
     componentMap[section.__component as keyof typeof componentMap];
 
