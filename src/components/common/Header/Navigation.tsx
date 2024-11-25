@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import Icon from "@/components/ui/Icon";
+import Link from "next/link";
 
 interface NavigationProps {
   isOpen: boolean;
@@ -32,8 +34,10 @@ export default function Navigation({ isOpen }: NavigationProps) {
           ))}
         </ul>
       </div>
-      <Button asChild variant="ghost">
-        <a href="#">Login</a>
+      <Button asChild appearance="ghost">
+        <Link href="/login">
+          Login <Icon name="arrow-right" />
+        </Link>
       </Button>
     </nav>
   );

@@ -5,6 +5,15 @@ import {
   YouTubeIcon,
   TikTokIcon,
   LinkedInIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  OffloadDeviceIcon,
+  MusicControlIcon,
+  PlayOnRepeatIcon,
+  LockIcon,
+  RocketIcon,
+  FlashIcon,
+  ArrowUp,
 } from "@/assets/icons";
 interface IconProps {
   name:
@@ -13,7 +22,16 @@ interface IconProps {
     | "twitter"
     | "youTube"
     | "tikTok"
-    | "linkedIn";
+    | "linkedIn"
+    | "arrow-right"
+    | "arrow-left"
+    | "offload-device"
+    | "music-control"
+    | "play-on-repeat"
+    | "lock"
+    | "rocket"
+    | "flash"
+    | "arrow-up";
   className?: string;
 }
 export default function Icon({ name, className, ...svgProps }: IconProps) {
@@ -25,6 +43,15 @@ export default function Icon({ name, className, ...svgProps }: IconProps) {
     youTube: <YouTubeIcon className={className} {...svgProps} />,
     tikTok: <TikTokIcon className={className} {...svgProps} />,
     linkedIn: <LinkedInIcon className={className} {...svgProps} />,
+    "arrow-left": <ArrowLeftIcon className={className} {...svgProps} />,
+    "arrow-right": <ArrowRightIcon className={className} {...svgProps} />,
+    "offload-device": <OffloadDeviceIcon className={className} {...svgProps} />,
+    "music-control": <MusicControlIcon className={className} {...svgProps} />,
+    "play-on-repeat": <PlayOnRepeatIcon className={className} {...svgProps} />,
+    lock: <LockIcon className={className} {...svgProps} />,
+    rocket: <RocketIcon className={className} {...svgProps} />,
+    flash: <FlashIcon className={className} {...svgProps} />,
+    "arrow-up": <ArrowUp className={className} {...svgProps} />,
   };
 
   return Icons[name];

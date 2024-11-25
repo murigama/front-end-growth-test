@@ -1,6 +1,4 @@
 import Container from "@/components/ui/Container";
-
-import styles from "./Footer.module.css";
 import Logo from "./Logo";
 import SwitchLanguage from "./SwitchLanguage";
 import Social from "./Social";
@@ -20,9 +18,9 @@ export default async function Footer({
   footerMenu = [],
 }: FooterProps) {
   return (
-    <footer className={styles.footer}>
+    <footer className="py-20 relative bg-footer">
       <Container>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 gap-8 mb-12">
           <div>
             <Logo />
             <p className="mt-2">{helpText}</p>
@@ -34,10 +32,10 @@ export default async function Footer({
           </div>
         </div>
         <div className="mt-4 border-t flex flex-col lg:flex-row justify-between items-center pt-10 border-t-gray-700">
-          <p className="text-gray-500">{copyrightText}</p>
-          <p className="text-gray-500">
+          <p className="text-gray-500 text-sm">{copyrightText}</p>
+          <p className="text-gray-500 text-sm">
             Status{" "}
-            <span className="text-green-300">
+            <span className="text-[#0AFFA7]">
               &bull; All systems are normal
             </span>
           </p>

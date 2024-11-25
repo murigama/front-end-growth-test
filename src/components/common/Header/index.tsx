@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <header className="h-[90px]">
+    <header className="h-[90px] fixed bg-transparent w-full z-50">
       <Container className="flex items-center h-full justify-between">
         <Logo />
         <Navigation isOpen={isMenuOpen} />

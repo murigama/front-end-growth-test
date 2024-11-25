@@ -18,9 +18,9 @@ export default async function RootLayout({
   const globalData = await data.json();
   return (
     <html lang="en">
-      <body className="bg-black text-white">
+      <body>
         <Header />
-        <main style={{ padding: 32 }}>{children}</main>
+        <main>{children}</main>
         <Footer
           helpText={globalData.helpText}
           copyrightText={globalData.copyright}
